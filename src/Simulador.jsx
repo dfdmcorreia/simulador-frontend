@@ -9,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.j
 import { Alert, AlertDescription } from '@/components/ui/alert.jsx'
 import { Calculator, Building, DollarSign, Calendar, User, FileText, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react'
 
-const API_BASE_URL = 'https://kkh7ikcgqo86.manus.space/api'
+const API_BASE_URL = 'https://simulador-imobiliario-api.onrender.com/api'
 
 function Simulador() {
   const [step, setStep] = useState(1)
