@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dfdmcorreia.github.io/simulador-imobiliario/",
+  "homepage": "https://<SEU_USUARIO_GITHUB>.github.io/simulador-imobiliario/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -24,7 +24,6 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-label": "^1.0.2",
     "@radix-ui/react-select": "^2.0.0",
-    "@radix-ui/react-alert": "^1.0.5",
     "@radix-ui/react-tabs": "^1.0.4"
   },
   "devDependencies": {
