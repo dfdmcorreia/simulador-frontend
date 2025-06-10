@@ -15,7 +15,7 @@ function Glossario() {
 
   const carregarGlossario = async () => {
     try {
-      const response = await fetch('https://kkh7ikcgqo86.manus.space/api/glossario')
+      const response = await fetch('https://simulador-imobiliario-api.onrender.com/api/glossario')
       const data = await response.json()
       setGlossario(data.glossario || {})
     } catch (error) {
