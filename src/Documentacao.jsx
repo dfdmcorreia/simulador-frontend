@@ -22,7 +22,7 @@ function Documentacao() {
     setErro(null)
 
     try {
-      const response = await fetch('https://kkh7ikcgqo86.manus.space/api/documentacao', {
+      const response = await fetch('https://simulador-imobiliario-api.onrender.com/api/documentacao', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
