@@ -7,11 +7,11 @@ import { Badge } from '@/components/ui/badge.jsx'
 //import './App.css'
 
 // Componentes das páginas
-import Dashboard from './components/Dashboard'
-import Simulador from './components/Simulador'
-import Documentacao from './components/Documentacao'
-import Glossario from './components/Glossario'
-import Configuracoes from './components/Configuracoes'
+import Dashboard from './Dashboard.jsx' // Removido 'components/' e adicionado '.jsx' para clareza
+import Simulador from './Simulador.jsx' // Removido 'components/' e corrigido o caminho
+import Documentacao from './Documentacao.jsx' // Removido 'components/'
+import Glossario from './Glossario.jsx' // Removido 'components/'
+import Configuracoes from './Configuracoes.jsx' // Removido 'components/'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
