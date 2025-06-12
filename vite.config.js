@@ -1,33 +1,22 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path'; // Certifique-se que esta linha está presente
+import path from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-
-  // Definir a base do deploy. Geralmente '/' para apps SPA.
-  base: '/', 
-
-  // Onde os arquivos estáticos (como assets e o próprio index.html durante dev) são servidos.
-  // É a pasta onde o Vite "procura" por arquivos que serão copiados diretamente.
-  // Mantenha 'public' se você tem outros assets lá.
-  publicDir: 'public', 
-
+  base: '/',
+  publicDir: 'public',
   build: {
-    outDir: 'dist', // Diretório de saída da build
-    emptyOutDir: true, // Garante que a pasta dist é limpa antes de cada build
-
+    outDir: 'dist',
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        // Define explicitamente o ponto de entrada do seu HTML
-        // 'main' é o nome da entrada, e o caminho é o arquivo index.html na raiz do projeto.
-        main: path.resolve(__dirname, 'index.html'), 
+        // Tentativa de especificar o nome do arquivo de forma mais direta
+        // 'index' ou 'main' geralmente funcionam, mas vamos ser explícitos
+        app: path.resolve(__dirname, 'index.html'), // Alterado de 'main' para 'app' ou 'index' se preferir
       },
     },
   },
-
-  // Configurações de resolução de módulos, útil para aliases como '@/components'
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
