@@ -7,6 +7,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert.jsx'
 import { FileText, Calculator, AlertCircle } from 'lucide-react'
 
 function Documentacao() {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
   const [valorImovel, setValorImovel] = useState('')
   const [resultado, setResultado] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -22,7 +23,7 @@ function Documentacao() {
     setErro(null)
 
     try {
-      const response = await fetch('https://simulador-imobiliario-api.onrender.com/api/documentacao', {
+      const response = await fetch(`${API_BASE_URL}/documentacao`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
