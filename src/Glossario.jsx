@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge.jsx'
 import { BookOpen, Search } from 'lucide-react'
 
 function Glossario() {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
   const [searchTerm, setSearchTerm] = useState('')
   const [glossario, setGlossario] = useState({})
   const [loading, setLoading] = useState(true)
@@ -15,7 +16,8 @@ function Glossario() {
 
   const carregarGlossario = async () => {
     try {
-      const response = await fetch('https://simulador-imobiliario-api.onrender.com/api/glossario')
+      const response = await fetch(`${API_BASE_URL}/glossario`)
+      
       const data = await response.json()
       setGlossario(data.glossario || {})
     } catch (error) {
