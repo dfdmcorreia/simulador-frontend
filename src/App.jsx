@@ -4,7 +4,7 @@ import { Calculator, Home, FileText, BookOpen, Settings, Menu, X } from 'lucide-
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
-import './App.css'
+//import './App.css'
 
 // Componentes das páginas
 import Dashboard from './components/Dashboard'
