@@ -1,16 +1,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path'; // <--- Adicione esta linha
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/', // <--- Alterado para '/'
-  publicDir: 'public', // <--- Adicionado: Informa ao Vite onde estão os arquivos estáticos (incluindo index.html)
+  base: '/', // Importante para o Vercel
+  publicDir: 'public', // MUITO IMPORTANTE: Indica onde o Vite deve procurar o index.html e outros assets
   build: {
-    outDir: 'dist' // <--- Já estava correto
+    outDir: 'dist'
   },
-  resolve: { // <--- Adicionado para resolver aliases como '@/components'
+  resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
