@@ -1,10 +1,18 @@
-import { defineConfig } from 'vite'; // Esta linha aqui
-import react from '@vitejs/plugin-react'; // E esta linha aqui
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path'; // <--- Adicione esta linha
 
-export default defineConfig({ // E então o objeto de configuração começa aqui
+// https://vitejs.dev/config/
+export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/', // <--- Alterado para '/'
+  publicDir: 'public', // <--- Adicionado: Informa ao Vite onde estão os arquivos estáticos (incluindo index.html)
   build: {
-    outDir: 'dist'
-  }
+    outDir: 'dist' // <--- Já estava correto
+  },
+  resolve: { // <--- Adicionado para resolver aliases como '@/components'
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
 });
